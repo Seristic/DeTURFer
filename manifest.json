@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "DeTURFer",
+    "version": "1.0",
+    "description": "Blurs or replaces Reform UK and other transphobic content on the web.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_title": "DeTURFer Active",
+        "default_icon": "icons/trans_icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "icons": {}
+}
